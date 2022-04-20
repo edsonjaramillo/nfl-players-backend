@@ -1,7 +1,6 @@
 # NFL Players Directory Backend Server
 
 This backend server is connected to a Postgresql (Supabase) that contains the latest directory of NFL players for the 2021 season. All of the data was gathered by a web scraper.
-
 Python program repo: [NFL Players Active Directory Web Scraper](https://github.com/edsonjaramillo/nfl-players-web-scraper)
 
 ## Technologies used:
@@ -13,10 +12,6 @@ Python program repo: [NFL Players Active Directory Web Scraper](https://github.c
 ## List Players
 
 The route is the `GET /players` to return a list of all NFL players and their information in alphabetical order by last name according to NFL.com
-
-#### Values that can be used
-
-`C`, `CB`, `DB`, `DE`, `DL`, `DT`, `FB`, `FS`, `G`, `ILB`, `K`, `LB`, `LS`, `MLB`, `NT`, `OG`, `OL`, `OLB`, `OT`, `P`, `QB`, `RB`, `SAF`, `SS`, `TE`, `WR`
 
 ### Example request using cURL:
 
@@ -75,6 +70,10 @@ curl -X POST \
     -d '{"team":"Patriots"}'
 ```
 
+#### Values that can be used
+
+`49ers`, `Bears`, `Bengals`, `Bills`, `Broncos`, `Browns`, `Buccaneers`, `Cardinals`, `Chargers`, `Chiefs`, `Colts`, `Commanders`, `Cowboys`, `Dolphins`, `Eagles`, `Falcons`, `Giants`, `Jaguars`, `Jets`, `Lions`, `Packers`, `Panthers`, `Patriots`, `Raiders`, `Rams`, `Ravens`, `Saints`, `Seahawks`, `Steelers`, `Texans`, `Titans`, `Vikings`
+
 ### Response Example
 
 ```json
@@ -115,10 +114,6 @@ curl -X POST \
 
 This route is the `POST /playersbyposition`. It returns a list of NFL players that match the position variable sent.
 
-#### Values that can be used
-
-`C`, `CB`, `DB`, `DE`, `DL`, `DT`, `FB`, `FS`, `G`, `ILB`, `K`, `LB`, `LS`, `MLB`, `NT`, `OG`, `OL`, `OLB`, `OT`, `P`, `QB`, `RB`, `SAF`, `SS`, `TE`, `WR`
-
 ### Example request using cURL:
 
 ```bash
@@ -127,6 +122,10 @@ curl -X POST \
     -H "Content-Type: application/json" \
     -d '{"position":"QB"}'
 ```
+
+#### Values that can be used
+
+`C`, `CB`, `DB`, `DE`, `DL`, `DT`, `FB`, `FS`, `G`, `ILB`, `K`, `LB`, `LS`, `MLB`, `NT`, `OG`, `OL`, `OLB`, `OT`, `P`, `QB`, `RB`, `SAF`, `SS`, `TE`, `WR`
 
 ### Response Example
 
@@ -175,10 +174,6 @@ curl -X POST \
 
 This route is the `POST /playersbystatus`. It returns a list of NFL players that match the status variable sent.
 
-#### Values that can be used
-
-`ACT`, `RFA`, `SUS`, `UFA`
-
 ### Example request using cURL:
 
 ```bash
@@ -187,6 +182,10 @@ curl -X POST \
     -H "Content-Type: application/json" \
     -d '{"status":"ACT"}'
 ```
+
+#### Values that can be used
+
+`ACT`, `RFA`, `SUS`, `UFA`
 
 ### Response Example
 
