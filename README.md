@@ -1,6 +1,7 @@
 # NFL Players Directory Backend Server
 
 This backend server is connected to a Postgresql (Supabase) that contains the latest directory of NFL players for the 2021 season. All of the data was gathered by a web scraper.
+
 Python program repo: [NFL Players Active Directory Web Scraper](https://github.com/edsonjaramillo/nfl-players-web-scraper)
 
 ## Technologies used:
